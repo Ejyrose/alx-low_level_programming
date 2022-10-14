@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Entry
- * Message: checks on the last digit of the assigned var
- * Return: Always 0 (success) 
+ * main - Entry point
+ * Descripton: checks on the last digit of the assigned var
+ * Return: Always 0 (success)
  */
 int main(void)
 {
