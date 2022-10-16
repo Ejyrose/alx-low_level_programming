@@ -7,7 +7,7 @@ int main(void)
 {
 	char i;
 
-	for (i = 'a'; <= 'Z'; i++)
+	for (i = 'a'; i <= 'Z'; i++)
 	{
 		if (i == 'e' || i == 'q')
 			continue;
