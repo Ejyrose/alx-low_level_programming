@@ -2,8 +2,7 @@
 
 /**
  * main - prints _putchar and a new line
- * written by jyro code
- * Return: Always 0
+ * Return: 0
  */
 
 int main(void)
