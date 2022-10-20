@@ -14,3 +14,4 @@ int _isdigit(int c)
 		y = 1;
 
 	return (y);
+}
