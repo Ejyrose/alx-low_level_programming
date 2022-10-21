@@ -2,7 +2,7 @@
 
 /**
  * main - print fizzbuzz
- * Return: Always o
+ * Return: Always 0
  */
 int main(void)
 {
