@@ -2,19 +2,15 @@
 
 /**
  * puts2 - prints one character out of two
- * @str: input
- * Return: print
+ * @str: char to check
+ * Return: 0 success
  */
 void puts2(char *str)
 {
-	int i = 0;
+	int string;
 
-	for (; str[i] != '\0'; i++)
-	{
-		if ((i % 2) == 0)
-			_putchar(str[i]);
-		else
-			continue;
-	}
+	for (string = 0; str[string] != '\0'; string++)
+		if (string % 2 == 0)
+			_putchar(str[string]);
 	_putchar('\n');
 }
