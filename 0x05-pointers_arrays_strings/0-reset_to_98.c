@@ -2,17 +2,12 @@
 /**
  * reset_to_98 - takes a pointer to an int as parameter
  *  and updates the value it points to to 98
+ *  @n: input
+ *  Return: n
  */
 
-void reset_to_98(int *n);
+void reset_to_98(int *n)
 {
-	int num = 98
-
-		int *p:
-
-		p = &num;
-
-	_putchar(98'\n');
-	return (0);
+	*n = 98;
 }
 
