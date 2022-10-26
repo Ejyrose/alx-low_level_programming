@@ -1,10 +1,11 @@
 #include "main.h"
+
 /**
  * _puts - prints a string
  * @str: string to be printed
  * Return: the length of the string
  */
-void _puts(char *str[i])
+void _puts(char *str)
 {
 	int i = 0;
 
