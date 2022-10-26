@@ -2,8 +2,8 @@
 
 /**
  * _puts - prints a string
- * @str: string to be printed
- * Return: the length of the string
+ * @str: the string
+ * return: the length of the string
  */
 void _puts(char *str)
 {
@@ -14,5 +14,5 @@ void _puts(char *str)
 		_putchar(str[i]);
 		i++;
 	}
-	_putchar('\n');
-}	
+	_putchar('\n')
+}
