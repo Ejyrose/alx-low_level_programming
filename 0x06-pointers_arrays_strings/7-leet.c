@@ -16,9 +16,7 @@ char *leet(char *s)
 		for (j = 0; j <= 9; j++)
 		{
 			if (a[j] == s[i])
-			{
 				s[i] = b[j];
-			}
 		}
 	}
 	return (s);
