@@ -1,10 +1,9 @@
-#include "man.h"
+#include "main.h"
 /**
  * _strcmp - compares two strings values
  * @s1: string
  * @s2: strmp
  * Return: int
- * eyrose
  */
 int _strcmp(char *s1, char *s2)
 {
