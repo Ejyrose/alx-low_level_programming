@@ -1,27 +1,36 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * create_array - creates an array of chars,
- * and initializes it with a specific char.
- * @size: the size of the array
- * @c: initial value
+ * alloc_grid - this function concatenate two strings
+ * @width: width
+ * @height: height
  *
- * Return: a pointer to the array, or NULL if it fails
+ * Return: int
  */
-char *create_array(unsigned int size, char c)
+
+int **alloc_grid(int width, int height)
 {
-	char *array;
-	unsigned int i;
+       int**array;
+       int i;
 
-	if (size == 0)
-		return (NULL);
-
-	array = (char *)malloc(sizeof(char) * size);
-	if (array == NULL)
-		return (NULL);
-
-	for (i = 0; i < size; i++)
-		array[i] = c;
-
-	return (array);
-}
+       if (width <= 0 || height <= 0)
+	       return (NULL);
+       array = malloc(sizeof(int *) * height);
+       if (array == NULL)
+	       return (NULL);
+       for (i = 0; i < height; i++)
+       {
+	       array[i] = malloc(sizeof(int) * width);
+	       if (array[i] == NULL)
+	       {
+		       for (; i >= 0; i --)
+		       {
+			       free(array[i];
+					       }
+					       free(array);
+					       return (NULL);
+					       }
+					       
+					       }
+					       return (array);
+					       }
