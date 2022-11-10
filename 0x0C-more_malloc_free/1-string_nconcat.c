@@ -1,44 +1,54 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 /**
- * string_nconcat - a function that concatenates two strings
- * @s1: first char
- * @s2: secound char
- * @n: unsigned int
+ * string_nconcat -  concatenates two strings
+ * @s1: string
+ * @s2: string
+ * @n:int
  *
- * Return: If the function fails, it should return NULL
+ * Return: char value
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int x, y, z;
-	char *s;
+	char *complete;
+	int i;
+	unsigned int len1 = 0, len2 = 0, j;
 
 	if (s1 == NULL)
-	{
-		x = 0
-	}
-	else
-	{
-		for (x = 0; s1[x]; ++x)
-			;
-	}
+		s1 = "";
 	if (s2 == NULL)
+		s2 = "";
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
+	if (n >= len2)
 	{
-		y = 0
+		complete = malloc(len1 + 1 + (sizeof(char) * len2));
+		if (complete == NULL)
+			return (NULL);
 	}
 	else
 	{
-		for (y = 0; s2[y]; ++y)
-			;
+		complete = malloc(len1 + 1 + (sizeof(char) * n));
+		if (complete == NULL)
+			return (NULL);
 	}
-	if (y > n)
-		y = n;
-	s = malloc(sizeof(char) * (x + y + 1));
-	if (s == NULL)
-		return (NULL);
-	for (z = 0; z < x; z++)
-		s[z] = s1[z];
-	for (z = 0; z < y; z++)
-		s[z + x] = s2[z];
-	s[x + y] = '\0';
-	return (s);
+	for (i = 0; s1[i] != '\0'; i++)
+		complete[i] = s1[i];
+	if (n >= len2)
+	{
+		for (j = 0; j < len2; j++, i++)
+			complete[i] = s2[j];
+		complete[i] = '\0';
+		return (complete);
+	}
+	for (j = 0; j < n; j++)
+	{
+		complete[i] = s2[j];
+		i++;
+	}
+	complete[i] = '\0';
+	return (complete);
 }
