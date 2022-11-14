@@ -1,42 +1,6 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- * new_dog - creates a new dog
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
- *
- * Return: owner of dog
- */
-dog_t *new_dog(char *name, float age, char *owner)
-{
-	int length;
-
-	for (length = 0; src[length] != '\0'; length++)
-	{
-		dest[length] = src[length];
-	}
-	dest[length] = src[length];
-	return (dest);
-}
-/**
- * _strlen - this function return the legth of a string
- *
- * @s: value
- *
- * Return: value
- */
-{
-	char n = 'a';
-	int i;
-
-	for (i = 0; (n != '\0'); i++)
-	{
-		n = s[i];
-	}
-	return (i - 1);
-}
-/**
  * new_dog - this funcion prints dog nfo
  * @name: dog name
  * @age: dog age
