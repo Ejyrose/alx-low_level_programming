@@ -1,50 +1,49 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
-
 /**
- * print_all - print char, integer, float and string
- * @format: format
+ * print_all - Prints all of the arguments when specified
+ * @format: specifies the necessary operations
+ * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	unsigned int j = 0, start = 0;
-	char *p;
+	int i;
+	int flag;
+	char *str;
+	va_list a_list;
 
-
-	va_start(list, format);
-	while (format && format[j] != '\0')
+	va_start(a_list, format);
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
-		switch (format[j])
-		{ case 'c':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			printf("%c", va_arg(list, int));
-			break;
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", va_arg(a_list, int));
+				flag = 0;
+				break;
 			case 'i':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			printf("%i", va_arg(list, int));
-			break;
-		case 'f':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			printf("%f", va_arg(list, double));
-			break;
-		case's':
-			switch (start)
-			{ case 1: printf(", "); }
-			start = 1;
-			p = va_arg(list, char*);
-			if (p)
-			{ printf("%s", p);
-				break; }
-			j++;
+				printf("%i", va_arg(a_list, int));
+				flag = 0;
+				break;
+			case 'f':
+				printf("%f", va_arg(a_list, double));
+				flag = 0;
+				break;
+			case 's':
+				str = va_arg(a_list, char*);
+				if (str == NULL)
+					str = "(null)";
+				printf("%s", str);
+				flag = 0;
+				break;
+			default:
+				flag = 1;
+				break;
 		}
-		printf("\n");
-		va_end(list);
+		if (format[i + 1] != '\0' && flag == 0)
+			printf(", ");
+		i++;
 	}
+	printf("\n");
+	va_end(a_list);
+}
