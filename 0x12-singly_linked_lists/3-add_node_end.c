@@ -3,18 +3,21 @@
 #include "lists.h"
 
 /**
- * _strlen - finds the length of a string
- * @str: string to find the length of
+ * _strlen - this function return the length of a string
+ * @s: value
  *
- * Return: length of string
+ * Return: value
  */
-unsigned int _strlen(char *str)
+int _strlen(const char *s)
 {
-	unsigned int i;
+	char n;
+	int i;
 
-	for (i = 0; str[i]; i++)
-		;
-	return (i);
+	for (i = 0; (n != '\0'); i++)
+	{
+		n = s[i];
+	}
+	return (i - 1);
 }
 /**
  * add_node_end - adds a new node to the end of linked list
@@ -53,5 +56,3 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	return (newNode);
 }
-
-

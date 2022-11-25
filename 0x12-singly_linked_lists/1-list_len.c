@@ -4,7 +4,7 @@
  * @h: pointer to list
  * Return: number of elements in list
  */
-size_t list_len(const list_t *h);
+size_t list_len(const list_t *h)
 {
 	unsigned int elementNum = 0;
 
