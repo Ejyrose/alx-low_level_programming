@@ -6,7 +6,7 @@
  * _strlen - this function return the legth of a string
  * @s: value
  *
- * Return: value 
+ * Return: value
  */
 int _strlen(const char *s)
 {
